@@ -24,9 +24,8 @@ RUN set -x \
   && apt-get install -y --no-install-recommends apt-transport-https ca-certificates curl unzip
 
 RUN set -x \
-  && curl -fssL -O https://github.com/percona/proxysql_exporter/releases/download/${TAG}/proxysql_exporter-${TAG#v}.linux-amd64.tar.gz \
-  && tar -xzvf proxysql_exporter-${TAG#v}.linux-amd64.tar.gz \
-  && mv proxysql_exporter-${TAG#v}.linux-amd64/proxysql_exporter proxysql_exporter \
+  && curl -fssL -O https://github.com/percona/proxysql_exporter/releases/download/${TAG}/proxysql_exporter_linux_amd64.tar.gz \
+  && tar -xzvf proxysql_exporter_linux_amd64.tar.gz \
   && chmod +x proxysql_exporter
 
 FROM alpine:latest
