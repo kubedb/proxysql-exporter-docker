@@ -1,7 +1,7 @@
 SHELL=/bin/bash -o pipefail
 
 REGISTRY   ?= kubedb
-BIN        ?= proxysql_exporter
+BIN        ?= proxysql-exporter
 IMAGE      := $(REGISTRY)/$(BIN)
 TAG        ?= $(shell git describe --exact-match --abbrev=0 2>/dev/null || echo "")
 
